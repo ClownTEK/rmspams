@@ -5,6 +5,6 @@ install -m 600 pf.conf /etc
 install -m 755 rmspams /usr/local/sbin
 cat <<EOF
 You should add this entry in your crontab(5)
-0 0 * * * pfctl -t blacksmtp -T expire 86400
+0 0 * * * /sbin/pfctl -t blacksmtp -T expire 86400
 to remove from blacklist old ip addresses.
 EOF
